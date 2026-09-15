@@ -13,7 +13,7 @@ from aiogram.exceptions import TelegramBadRequest
 #                    НАСТРОЙКИ БОТА
 # ═══════════════════════════════════════════════════════════════
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = os.getenv("API_TOKEN")
 ADMIN_ID = 8672112132
 
 # === FILE_ID КАРТИНОК (для экранов) ===
