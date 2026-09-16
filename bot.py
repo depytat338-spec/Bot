@@ -13,8 +13,11 @@ from aiogram.exceptions import TelegramBadRequest
 #                    НАСТРОЙКИ БОТА
 # ═══════════════════════════════════════════════════════════════
 
-BOT_TOKEN = "8651295072:AAGGtuMtdI9dv_WrFPDgclA1b_xBR4PSSWM"
+BOT_TOKEN = os.getenv("API_TOKEN")
 ADMIN_ID = 8672112132
+
+if not BOT_TOKEN:
+    raise ValueError("❌ Переменная окружения API_TOKEN не задана!")
 
 # === FILE_ID КАРТИНОК (для экранов) ===
 PHOTO_MAIN = "AgACAgIAAxkBAAOtaqgFb9jdIGgOEVmhSCKQdduvEl4AAsQfaxuPZUBJpS7q7CFEAAG8AQADAgADeAADPQQ"
